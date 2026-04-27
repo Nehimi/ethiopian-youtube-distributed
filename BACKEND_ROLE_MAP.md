@@ -6,15 +6,15 @@
 | Position | Name | ID | Primary Role | Backend Focus |
 |----------|------|----|--------------|---------------|
 | **Group Leader** | **TESHALE SULE** | **1600360** | Architecture & Integration | Load Balancing, Fault Tolerance |
-| RMI Interface Lead | NEHIMI GULUFA  | 1501190 | RMI Specialist | VideoInterface, Registry Setup |
+| RMI Interface Lead | NEHIMI GULUFA | 1501190 | RMI Specialist | VideoInterface, Registry Setup |
 | RMI Implementation | Sitotaw Samuel | 1600335 | RMI Developer | VideoImpl, Server Logic |
 | Streaming Engineer | Yaicob Tamiru | 1600387 | File Streaming | Byte Transfer, Performance |
-| Node Manager |  YISIHAK TADIWOS | 1600394 | Node Administration | Multi-node Setup, Monitoring |
+| Node Manager | YISIHAK TADIWOS | 1600394 | Node Administration | Multi-node Setup, Monitoring |
 | QA Engineer | Hewan Geremew | 1602290 | Testing & Quality | Test Framework, Validation |
 | Database Architect | Bekam Bayzar | 1600063 | Database Design | Schema, CRUD Operations |
 | Integration Lead | SIMON TESFAYE | 16D4880 | System Integration | Database-RMI, Synchronization |
 | Database Tester | HAGARE ERTIRO | 1600668 | Database Testing | Unit Tests, Performance |
-| Performance Engineer |  Anna Yaikob | 16001059 | Performance & Support | Monitoring, Optimization |
+| Performance Engineer | Anna Yaikob | 16001059 | Performance & Support | Monitoring, Optimization |
 
 ---
 
@@ -35,7 +35,7 @@
 
 ### 🗓️ Days 1-2: RMI Foundation (Monday-Tuesday)
 
-#### 🔌 Bekam Bayzar (1600063) - RMI Interface Lead
+#### 🔌 NEHIMI GULUFA (1501190) - RMI Interface Lead
 **Priority Tasks:**
 - [ ] **`VideoInterface.java`** - Define core server operations (Upload, Download, List)
 - [ ] **RMI Registry Setup** - Configure registry for distributed communication
@@ -75,7 +75,7 @@
 - Large file handling ✅
 - Performance benchmarks ✅
 
-#### 🖥️ Anna Yaikob (16001059) - Node Management Engineer
+#### 🖥️ YISIHAK TADIWOS (1600394) - Node Management Engineer
 **Priority Tasks:**
 - [ ] **Multi-Node Setup** - Configure servers on ports 1099 & 1100
 - [ ] **File Storage** - Manage Node1/Node2 directory operations
@@ -103,7 +103,7 @@
 
 ### 🗓️ Days 5-7: Database Integration & Load Balancing (Friday-Sunday)
 
-#### 🗄️ NEHIMI GULUFA (1501190) - Database Architect
+#### 🗄️ Bekam Bayzar (1600063) - Database Architect
 **Priority Tasks:**
 - [ ] **Database Schema** - Design MySQL tables for video metadata
 - [ ] **CRUD Operations** - Implement `DatabaseManager.java`
@@ -139,7 +139,7 @@
 - Integration tests ✅
 - Performance reports ✅
 
-#### 📊 YISIHAK TADIWOS (1600394) - Performance Engineer
+#### 📊 Anna Yaikob (16001059) - Performance Engineer
 **Priority Tasks:**
 - [ ] **Database Setup** - Assist with MySQL configuration
 - [ ] **Performance Testing** - Test query response times
@@ -179,7 +179,7 @@
 ### 🔗 Integration Schedule
 | Day | Integration Focus | Lead | Participants |
 |-----|------------------|------|--------------|
-| **Day 2** | RMI Foundation Integration | Bekam Bayzar | Bekam, Sitotaw, TESHALE |
+| **Day 2** | RMI Foundation Integration | NEHIMI GULUFA | NEHIMI, Sitotaw, TESHALE |
 | **Day 4** | File Streaming Integration | Yaicob Tamiru | Yaicob, Anna, Hewan, TESHALE |
 | **Day 7** | Full Backend Integration | TESHALE SULE | All backend members |
 
@@ -198,7 +198,7 @@
 
 ## 📋 Backend Deliverables Checklist
 
-### 🔌 Bekam Bayzar (1600063) - RMI Interface Lead
+### 🔌 NEHIMI GULUFA (1501190) - RMI Interface Lead
 - [ ] **Core Interface** - `VideoInterface.java` ✅
 - [ ] **Registry Setup** - RMI Registry configuration ✅
 - [ ] **Test Suite** - RMI communication tests ✅
@@ -216,7 +216,7 @@
 - [ ] **Performance** - Streaming optimization ✅
 - [ ] **Chunking** - Chunked transfer mechanism ✅
 
-### 🖥️ Anna Yaikob (16001059) - Node Management
+### 🖥️ YISIHAK TADIWOS (1600394) - Node Management
 - [ ] **Multi-Node** - Server setup on ports 1099/1100 ✅
 - [ ] **Node Manager** - Node management system ✅
 - [ ] **Port Config** - Port configuration management ✅
@@ -228,7 +228,7 @@
 - [ ] **Automation** - Test automation framework ✅
 - [ ] **Validation** - Data integrity tests ✅
 
-### 🗄️ NEHIMI GULUFA (1501190) - Database Architect
+### 🗄️ Bekam Bayzar (1600063) - Database Architect
 - [ ] **Database Schema** - MySQL table design ✅
 - [ ] **DB Manager** - `DatabaseManager.java` ✅
 - [ ] **Connections** - Connection pooling ✅
@@ -246,7 +246,7 @@
 - [ ] **Performance** - Performance benchmarks ✅
 - [ ] **Consistency** - Data consistency tests ✅
 
-### 📊 YISIHAK TADIWOS (1600394) - Performance Engineer
+### 📊 Anna Yaikob (16001059) - Performance Engineer
 - [ ] **Perf Reports** - Performance testing reports ✅
 - [ ] **Monitoring** - System monitoring tools ✅
 - [ ] **Optimization** - Performance improvements ✅
@@ -311,9 +311,9 @@
 | Role | Person | Contact | Backup |
 |------|-------|---------|--------|
 | **Technical Lead** | TESHALE SULE | [Phone] | SIMON TESFAYE |
-| **Database Issues** | NEHIMI GULUFA | [Phone] | HAGARE ERTIRO |
-| **Server Issues** | Anna Yaikob | [Phone] | Yaicob Tamiru |
-| **Testing Issues** | Hewan Geremew | [Phone] | YISIHAK TADIWOS |
+| **Database Issues** | Bekam Bayzar | [Phone] | HAGARE ERTIRO |
+| **Server Issues** | YISIHAK TADIWOS | [Phone] | Yaicob Tamiru |
+| **Testing Issues** | Hewan Geremew | [Phone] | Anna Yaikob |
 
 ### 🛠️ Issue Tracking
 - **🏷️ Labels**: `bug`, `enhancement`, `hotfix`, `wip`, `blocked`
@@ -328,9 +328,9 @@
 ### 🎯 Week 1 Backend Goals
 | Day | Focus | Lead | Deliverable |
 |-----|-------|------|-------------|
-| **1-2** | RMI Foundation | Bekam | Working RMI system |
+| **1-2** | RMI Foundation | NEHIMI | Working RMI system |
 | **3-4** | File Streaming | Yaicob | File transfer working |
-| **5-7** | Database & Load Balancing | NEHIMI | Complete backend |
+| **5-7** | Database & Load Balancing | Bekam | Complete backend |
 
 ### 🚀 Success Metrics
 - ✅ **100% RMI functionality** by Day 2

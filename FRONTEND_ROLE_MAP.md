@@ -5,16 +5,16 @@
 
 | Position | Name | ID | Primary Role | Frontend Focus |
 |----------|------|----|--------------|---------------|
-| **Group Leader** | **TESHALE SULE** | **1600360** | UI/UX Architecture | Integration, Design System |
-| UI Architecture Lead | Bekam Bayzar | 1600063 | UI Specialist | Main Application, Scene Management |
-| UI Developer | Sitotaw Samuel | 1600335 | Frontend Developer | Video Gallery, Search Interface |
-| CSS/Animation Lead | Yaicob Tamiru | 1600387 | Design Specialist | Glassmorphism, Animations |
-| Modal Designer | Anna Yaikob | 16001059 | UI Designer | Upload Modal, Forms |
-| Media Player Engineer | Hewan Geremew | 1602290 | Media Specialist | Video Player, Controls |
-| RMI Integration Lead | NEHIMI GULUFA | 1501190 | Backend Integration | RMI Client, Network |
-| Data Management | SIMON TESFAYE | 16D4880 | Frontend Integration | Data Services, Caching |
-| Frontend Testing | HAGARE ERTIRO | 1600668 | QA Engineer | UI Testing, Validation |
-| Performance & UX | YISIHAK TADIWOS | 1600394 | Performance Engineer | Optimization, UX |
+| **Group Leader** | **TESHALE SULE** | **1600360** | Architecture & Integration | Integration, Design System |
+| UI Architecture Lead | Bekam Bayzar | 1600063 | Database Design | Main Application, Scene Management |
+| UI Developer | Sitotaw Samuel | 1600335 | RMI Developer | Video Gallery, Search Interface |
+| CSS/Animation Lead | Yaicob Tamiru | 1600387 | File Streaming | Glassmorphism, Animations |
+| Modal Designer | Anna Yaikob | 16001059 | Performance & Support | Upload Modal, Forms |
+| Media Player Engineer | Hewan Geremew | 1602290 | Testing & Quality | Video Player, Controls |
+| RMI Integration Lead | NEHIMI GULUFA | 1501190 | RMI Specialist | RMI Client, Network |
+| Data Management | SIMON TESFAYE | 16D4880 | System Integration | Data Services, Caching |
+| Frontend Testing | HAGARE ERTIRO | 1600668 | Database Testing | UI Testing, Validation |
+| Performance & UX | YISIHAK TADIWOS | 1600394 | Node Administration | Optimization, UX |
 
 ---
 
@@ -182,7 +182,7 @@ src/main/java/
 │   │   ├── VideoThumbnailController.java # Sitotaw Samuel
 │   │   ├── UploadModalController.java   # Anna Yaikob
 │   │   ├── VideoPlayerController.java   # Hewan Geremew
-│   │   └── SettingsController.java      # YISIHAK TADIWOS
+│   │   └── SettingsController.java      # Anna Yaikob
 │   ├── services/
 │   │   ├── RMIClient.java               # NEHIMI GULUFA
 │   │   ├── VideoService.java            # SIMON TESFAYE
