@@ -7,12 +7,12 @@
 |----------|------|----|--------------|---------------|
 | **Group Leader** | **TESHALE SULE** | **1600360** | Architecture & Integration | Integration, Design System |
 | UI Architecture Lead | Bekam Bayzar | 1600063 | Database Design | Main Application, Scene Management |
-| UI Developer | Sitotaw Samuel | 1600335 | RMI Developer | Video Gallery, Search Interface |
+| UI Developer | Sitotaw Samuel | 1600335 | System Integration | Video Gallery, Search Interface |
 | CSS/Animation Lead | Yaicob Tamiru | 1600387 | File Streaming | Glassmorphism, Animations |
 | Modal Designer | Anna Yaikob | 16001059 | Performance & Support | Upload Modal, Forms |
 | Media Player Engineer | Hewan Geremew | 1602290 | Testing & Quality | Video Player, Controls |
 | RMI Integration Lead | NEHIMI GULUFA | 1501190 | RMI Specialist | RMI Client, Network |
-| Data Management | SIMON TESFAYE | 16D4880 | System Integration | Data Services, Caching |
+| Data Management | SIMON TESFAYE | 16D4880 | RMI Developer | Data Services, Caching |
 | Frontend Testing | HAGARE ERTIRO | 1600668 | Database Testing | UI Testing, Validation |
 | Performance & UX | YISIHAK TADIWOS | 1600394 | Node Administration | Optimization, UX |
 
