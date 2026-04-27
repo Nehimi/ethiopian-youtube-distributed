@@ -9,12 +9,12 @@
 | RMI Interface Lead | Bekam Bayzar | 1600063 | RMI Specialist | VideoInterface, Registry Setup |
 | RMI Implementation | Sitotaw Samuel | 1600335 | RMI Developer | VideoImpl, Server Logic |
 | Streaming Engineer | Yaicob Tamiru | 1600387 | File Streaming | Byte Transfer, Performance |
-| Node Manager | Anna Yaikob | 16001059 | Node Administration | Multi-node Setup, Monitoring |
+| Node Manager |  YISIHAK TADIWOS | 16001059 | Node Administration | Multi-node Setup, Monitoring |
 | QA Engineer | Hewan Geremew | 1602290 | Testing & Quality | Test Framework, Validation |
 | Database Architect | NEHIMI GULUFA | 1501190 | Database Design | Schema, CRUD Operations |
 | Integration Lead | SIMON TESFAYE | 16D4880 | System Integration | Database-RMI, Synchronization |
 | Database Tester | HAGARE ERTIRO | 1600668 | Database Testing | Unit Tests, Performance |
-| Performance Engineer | YISIHAK TADIWOS | 1600394 | Performance & Support | Monitoring, Optimization |
+| Performance Engineer |  Anna Yaikob | 1600394 | Performance & Support | Monitoring, Optimization |
 
 ---
 
