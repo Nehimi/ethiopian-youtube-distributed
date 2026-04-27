@@ -10,7 +10,7 @@
 | RMI Implementation | Sitotaw Samuel | 1600335 | RMI Developer | VideoImpl, Server Logic |
 | Streaming Engineer | Yaicob Tamiru | 1600387 | File Streaming | Byte Transfer, Performance |
 | Node Manager | YISIHAK TADIWOS | 1600394 | Node Administration | Multi-node Setup, Monitoring |
-| QA Engineer | Hewan Geremew | 162290 | Testing & Quality | Test Framework, Validation |
+| QA Engineer | Hewan Geremew | 1602290 | Testing & Quality | Test Framework, Validation |
 | Database Architect | Bekam Bayzar | 1600063 | Database Design | Schema, CRUD Operations |
 | Integration Lead | SIMON TESFAYE | 16D4880 | System Integration | Database-RMI, Synchronization |
 | Database Tester | HAGARE ERTIRO | 1600668 | Database Testing | Unit Tests, Performance |
