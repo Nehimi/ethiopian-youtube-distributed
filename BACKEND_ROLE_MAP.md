@@ -47,7 +47,7 @@
 - RMI Registry configuration ✅
 - Unit test suite ✅
 
-#### ⚙️ Sitotaw Samuel (1600335) - RMI Implementation Engineer
+#### ⚙️ SIMON TESFAYE (16D4880) - RMI Implementation Engineer
 **Priority Tasks:**
 - [ ] **`VideoImpl.java`** - Implement core RMI functionality
 - [ ] **File Operations** - Handle Node1/Node2 file writing
@@ -115,7 +115,7 @@
 - `DatabaseManager.java` ✅
 - Connection pooling ✅
 
-#### 🔗 SIMON TESFAYE (16D4880) - Integration Engineer
+#### 🔗 Sitotaw Samuel (1600335) - Integration Engineer
 **Priority Tasks:**
 - [ ] **Database-RMI Integration** - Connect database with RMI server
 - [ ] **Metadata Retrieval** - Get video locations from database
@@ -179,7 +179,7 @@
 ### 🔗 Integration Schedule
 | Day | Integration Focus | Lead | Participants |
 |-----|------------------|------|--------------|
-| **Day 2** | RMI Foundation Integration | NEHIMI GULUFA | NEHIMI, Sitotaw, TESHALE |
+| **Day 2** | RMI Foundation Integration | NEHIMI GULUFA | NEHIMI, SIMON, TESHALE |
 | **Day 4** | File Streaming Integration | Yaicob Tamiru | Yaicob, Anna, Hewan, TESHALE |
 | **Day 7** | Full Backend Integration | TESHALE SULE | All backend members |
 
@@ -204,7 +204,7 @@
 - [ ] **Test Suite** - RMI communication tests ✅
 - [ ] **Documentation** - Interface documentation ✅
 
-### ⚙️ Sitotaw Samuel (1600335) - RMI Implementation
+### ⚙️ SIMON TESFAYE (16D4880) - RMI Implementation
 - [ ] **Implementation** - `VideoImpl.java` ✅
 - [ ] **File Structure** - Node1/Node2 folders ✅
 - [ ] **Server Logic** - Basic RMI server ✅
@@ -234,7 +234,7 @@
 - [ ] **Connections** - Connection pooling ✅
 - [ ] **Indexing** - Performance optimization ✅
 
-### 🔗 SIMON TESFAYE (16D4880) - Integration Engineer
+### 🔗 Sitotaw Samuel (1600335) - Integration Engineer
 - [ ] **Integration** - Database-RMI integration ✅
 - [ ] **Metadata** - Metadata retrieval system ✅
 - [ ] **Sync Logic** - Data synchronization ✅
@@ -310,7 +310,7 @@
 ### 🚨 Emergency Contacts
 | Role | Person | Contact | Backup |
 |------|-------|---------|--------|
-| **Technical Lead** | TESHALE SULE | [Phone] | SIMON TESFAYE |
+| **Technical Lead** | TESHALE SULE | [Phone] | Sitotaw Samuel |
 | **Database Issues** | Bekam Bayzar | [Phone] | HAGARE ERTIRO |
 | **Server Issues** | YISIHAK TADIWOS | [Phone] | Yaicob Tamiru |
 | **Testing Issues** | Hewan Geremew | [Phone] | Anna Yaikob |
