@@ -42,8 +42,13 @@ main                    # Production-ready code
 |-----------|----------------|---------------|----------------|
 | **Bekam Bayzar** | `feature/ui-architecture` | MainApplication.java | `git checkout feature/ui-architecture` |
 | **Sitotaw Samuel** | `feature/video-gallery` | Video gallery UI | `git checkout feature/video-gallery` |
-| **Yaicob Tamiru** | `feature/media-player` | Media player controls | `git checkout feature/media-player` |
+| **Yaicob Tamiru** | `feature/css-animation` | Glassmorphism & Animations | `git checkout feature/css-animation` |
 | **Anna Yaikob** | `feature/upload-modal` | Upload interface | `git checkout feature/upload-modal` |
+| **Hewan Geremew** | `feature/media-player` | Media player controls | `git checkout feature/media-player` |
+| **NEHIMI GULUFA** | `feature/rmi-client` | RMI Client Integration | `git checkout feature/rmi-client` |
+| **SIMON TESFAYE** | `feature/data-management` | Caching & Data Services | `git checkout feature/data-management` |
+| **HAGARE ERTIRO** | `feature/frontend-testing` | UI Testing | `git checkout feature/frontend-testing` |
+| **YISIHAK TADIWOS**| `feature/performance` | UX & Performance | `git checkout feature/performance` |
 
 ### **🏛️ Leadership**
 
@@ -94,13 +99,33 @@ git pull origin feature/ui-architecture
 git checkout feature/video-gallery
 git pull origin feature/video-gallery
 
-# Yaicob Tamiru - Media Player
-git checkout feature/media-player
-git pull origin feature/media-player
+# Yaicob Tamiru - CSS & Animation
+git checkout feature/css-animation
+git pull origin feature/css-animation
 
 # Anna Yaikob - Upload Modal
 git checkout feature/upload-modal
 git pull origin feature/upload-modal
+
+# Hewan Geremew - Media Player
+git checkout feature/media-player
+git pull origin feature/media-player
+
+# NEHIMI GULUFA - RMI Client
+git checkout feature/rmi-client
+git pull origin feature/rmi-client
+
+# SIMON TESFAYE - Data Management
+git checkout feature/data-management
+git pull origin feature/data-management
+
+# HAGARE ERTIRO - Frontend Testing
+git checkout feature/frontend-testing
+git pull origin feature/frontend-testing
+
+# YISIHAK TADIWOS - Performance & UX
+git checkout feature/performance
+git pull origin feature/performance
 ```
 
 #### **Team Leader:**
