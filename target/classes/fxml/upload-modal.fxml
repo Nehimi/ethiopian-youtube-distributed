@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns="http://javafx.com/javafx/17"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="ui.controllers.UploadModalController"
+           styleClass="main-root"
+           stylesheets="@../styles/youtube-style.css">
+
+    <VBox styleClass="modal-box" alignment="TOP_CENTER" spacing="18"
+          maxWidth="520" StackPane.alignment="CENTER">
+        <padding><Insets top="32" right="36" bottom="32" left="36"/></padding>
+
+        <!-- HEADER -->
+        <HBox alignment="CENTER_LEFT" spacing="12">
+            <Label text="⬆" styleClass="drop-icon" style="-fx-font-size:26px;"/>
+            <Text text="Upload Video" styleClass="modal-title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="✕" styleClass="icon-btn" onAction="#handleCancel"/>
+        </HBox>
+
+        <!-- ALERT -->
+        <Label fx:id="alertLabel" text="" wrapText="true" visible="false" managed="false"
+               maxWidth="Infinity"/>
+
+        <!-- FILE DROP ZONE -->
+        <VBox styleClass="file-drop-zone" alignment="CENTER" spacing="8"
+              onMouseClicked="#handleBrowseFile" maxWidth="Infinity">
+            <Text fx:id="dropIcon" text="📂" styleClass="drop-icon"/>
+            <Text fx:id="dropLabel" text="Click to browse or drag &amp; drop video"
+                  styleClass="drop-label"/>
+            <Text fx:id="dropSublabel" text="Supports .mp4, .avi, .mkv, .mov"
+                  styleClass="drop-sublabel"/>
+        </VBox>
+
+        <!-- TITLE -->
+        <VBox spacing="6">
+            <Label text="Title *" styleClass="form-label"/>
+            <TextField fx:id="titleField" promptText="Enter video title..."
+                       styleClass="form-field" maxWidth="Infinity"/>
+        </VBox>
+
+        <!-- DESCRIPTION -->
+        <VBox spacing="6">
+            <Label text="Description" styleClass="form-label"/>
+            <TextArea fx:id="descField" promptText="Describe your video..."
+                      styleClass="form-textarea" maxWidth="Infinity"
+                      wrapText="true" prefRowCount="3"/>
+        </VBox>
+
+        <!-- PROGRESS BAR (hidden until uploading) -->
+        <VBox fx:id="progressBox" visible="false" managed="false" spacing="6">
+            <Label text="Uploading..." styleClass="form-label"/>
+            <ProgressBar fx:id="uploadProgress" maxWidth="Infinity"
+                         styleClass="upload-progress" progress="0"/>
+            <Label fx:id="progressLabel" text="0%" styleClass="status-label"/>
+        </VBox>
+
+        <!-- BUTTONS -->
+        <HBox spacing="12" alignment="CENTER_RIGHT">
+            <Button text="Cancel" styleClass="modal-cancel-btn" onAction="#handleCancel"/>
+            <Button fx:id="uploadBtn" text="Upload" styleClass="modal-upload-btn"
+                    onAction="#handleUpload" disable="true"/>
+        </HBox>
+    </VBox>
+
+</StackPane>
