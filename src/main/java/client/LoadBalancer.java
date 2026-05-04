@@ -13,8 +13,8 @@ import database.VideoMetadata;
 public class LoadBalancer {
 
     private static final String HOST = "10.198.73.40";
-    private static final int NODE1_PORT = 8081;
-    private static final int NODE2_PORT = 8080;
+    private static final int NODE1_PORT = 1099;
+    private static final int NODE2_PORT = 1100;
 
     /**
      * Determines which node is responsible for the given video metadata.

@@ -8,7 +8,7 @@ public class QuickTest {
     System.setProperty("java.rmi.server.hostname", "10.198.73.40");
     System.out.println("=== Quick RMI Test ===");
     try {
-      Registry r = LocateRegistry.getRegistry("10.198.73.40", 8081);
+      Registry r = LocateRegistry.getRegistry("10.198.73.40", 1099);
       VideoInterface s = (VideoInterface) r.lookup("VideoService");
       System.out.println("Connected to Node1: " + (s != null));
       if (s != null) {

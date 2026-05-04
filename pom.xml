@@ -20,8 +20,6 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.33</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/mysql-connector-j-8.0.33.jar</systemPath>
         </dependency>
 
         <!-- MS SQL Server JDBC Driver -->

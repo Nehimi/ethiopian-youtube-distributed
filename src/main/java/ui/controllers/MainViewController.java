@@ -55,8 +55,9 @@ public class MainViewController {
     /** Check if Node1 and Node2 are reachable */
     private void checkNodeStatus() {
         new Thread(() -> {
-            boolean n1 = RMIClient.getService("10.198.73.40", 8081) != null;
-            boolean n2 = RMIClient.getService("10.198.73.40", 8080) != null;
+            // Use LoadBalancer to get the configured host and standard RMI ports
+            boolean n1 = RMIClient.getService(client.LoadBalancer.getHost(), 1099) != null;
+            boolean n2 = RMIClient.getService(client.LoadBalancer.getHost(), 1100) != null;
             Platform.runLater(() -> {
                 if (n1) {
                     node1StatusDot.setStyle("-fx-text-fill: #2ba640;");

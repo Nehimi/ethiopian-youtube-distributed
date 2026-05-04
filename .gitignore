@@ -1,0 +1,8 @@
+target/
+*.class
+Node1Storage/
+Node2Storage/
+.gemini/
+.idea/
+.vscode/
+*.log
