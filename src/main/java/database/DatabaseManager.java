@@ -9,23 +9,24 @@ import java.util.List;
  * It follows the DAO (Data Access Object) pattern.
  */
 public class DatabaseManager {
-    // Database credentials - Update as needed
-    private static final String URL = "jdbc:sqlserver://10.198.73.40\\SQLEXPRESS:1433;databaseName=YouTubeEthiopia;encrypt=false;trustServerCertificate=true;";
-    private static final String USER = "root";
-    private static final String PASSWORD = "";
+    // Database credentials for MS SQL Server (Using user-provided connection
+    // string)
+    private static final String URL = "jdbc:sqlserver://10.198.73.40\\SQLEXPRESS;databaseName=YouTubeEthiopia;encrypt=false;trustServerCertificate=true;";
+    private static final String USER = "yt_admin";
+    private static final String PASSWORD = "Admin123";
 
     static {
         try {
-            // Load the SQL Server JDBC driver
+            // Load the MS SQL Server JDBC driver
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
         } catch (ClassNotFoundException e) {
-            System.err.println("SQL Server JDBC Driver not found in classpath.");
+            System.err.println("MS SQL Server JDBC Driver not found in classpath.");
             e.printStackTrace();
         }
     }
 
     /**
-     * Establishes a connection to the MySQL database.
+     * Establishes a connection to the MS SQL Server database.
      */
     private static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL, USER, PASSWORD);
@@ -68,7 +69,7 @@ public class DatabaseManager {
      */
     public static List<VideoMetadata> getAllVideos() {
         List<VideoMetadata> videos = new ArrayList<>();
-        String query = "SELECT * FROM videos";
+        String query = "SELECT id, title, description, file_name, file_path, node_id, node_port FROM videos";
         try (Connection conn = getConnection();
                 Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery(query)) {
@@ -88,7 +89,7 @@ public class DatabaseManager {
      */
     public static List<VideoMetadata> searchVideos(String queryText) {
         List<VideoMetadata> videos = new ArrayList<>();
-        String query = "SELECT * FROM videos WHERE title LIKE ? OR description LIKE ?";
+        String query = "SELECT id, title, description, file_name, file_path, node_id, node_port FROM videos WHERE title LIKE ? OR description LIKE ?";
         try (Connection conn = getConnection();
                 PreparedStatement pstmt = conn.prepareStatement(query)) {
 
@@ -112,7 +113,7 @@ public class DatabaseManager {
      * Retrieves a single video's metadata by its ID.
      */
     public static VideoMetadata getVideoById(int id) {
-        String query = "SELECT * FROM videos WHERE id = ?";
+        String query = "SELECT id, title, description, file_name, file_path, node_id, node_port FROM videos WHERE id = ?";
         try (Connection conn = getConnection();
                 PreparedStatement pstmt = conn.prepareStatement(query)) {
 

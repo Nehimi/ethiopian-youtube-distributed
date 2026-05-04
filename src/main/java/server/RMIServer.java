@@ -7,7 +7,7 @@ public class RMIServer {
 
     public static void startServer(int port, String nodeName) {
         try {
-            // Force RMI to use 10.198.73.40 for local communication
+            // Force RMI to use 10.198.73.21 for network communication
             System.setProperty("java.rmi.server.hostname", "10.198.73.40");
 
             // Create or get the RMI registry

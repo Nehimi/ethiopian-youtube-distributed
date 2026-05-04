@@ -13,7 +13,8 @@ import java.util.List;
  */
 public class RMIClient {
     static {
-        System.setProperty("java.rmi.server.hostname", "10.198.73.40");
+        // Set this to YOUR computer's IP so the server can talk back to you
+        System.setProperty("java.rmi.server.hostname", "10.198.70.78");
     }
 
     /**
@@ -101,9 +102,9 @@ public class RMIClient {
      */
     public static List<VideoMetadata> searchVideos(String query) {
         // Default to Node 1 for general queries, or Node 2 if Node 1 is down
-        VideoInterface service = getService(LoadBalancer.getHost(), 8081);
+        VideoInterface service = getService(LoadBalancer.getHost(), 1099);
         if (service == null)
-            service = getService(LoadBalancer.getHost(), 8080);
+            service = getService(LoadBalancer.getHost(), 1100);
 
         if (service != null) {
             try {
