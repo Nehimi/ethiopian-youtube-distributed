@@ -88,10 +88,12 @@ public class VideoImpl extends UnicastRemoteObject implements VideoInterface {
     public byte[] downloadVideo(int videoId) throws RemoteException {
         try {
             VideoMetadata metadata = DatabaseManager.getVideoById(videoId);
-            if (metadata == null) return null;
+            if (metadata == null)
+                return null;
 
             File file = new File(metadata.getFilePath());
-            if (!file.exists()) return null;
+            if (!file.exists())
+                return null;
 
             byte[] data = new byte[(int) file.length()];
             FileInputStream fis = new FileInputStream(file);
@@ -120,4 +122,3 @@ public class VideoImpl extends UnicastRemoteObject implements VideoInterface {
         return DatabaseManager.getVideoById(videoId);
     }
 }
-

@@ -13,8 +13,8 @@ import java.util.List;
  */
 public class RMIClient {
     static {
-        // Set this to YOUR computer's IP so the server can talk back to you
-        System.setProperty("java.rmi.server.hostname", "10.198.70.78");
+        // Set this to localhost for reliable local testing
+        System.setProperty("java.rmi.server.hostname", "127.0.0.1");
     }
 
     /**
@@ -26,6 +26,7 @@ public class RMIClient {
             return (VideoInterface) registry.lookup("VideoService");
         } catch (Exception e) {
             System.err.println("Could not connect to VideoService at " + host + ":" + port);
+            e.printStackTrace(); // ይህ ስህተቱን በዝርዝር ያሳየናል
             return null;
         }
     }

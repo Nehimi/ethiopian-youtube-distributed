@@ -7,10 +7,9 @@ public class RMIServer {
 
     public static void startServer(int port, String nodeName) {
         try {
-            // Force RMI to use 10.198.73.21 for network communication
-            System.setProperty("java.rmi.server.hostname", "10.198.73.40");
 
-            // Create or get the RMI registry
+            System.setProperty("java.rmi.server.hostname", "127.0.0.1");
+
             Registry registry;
             try {
                 registry = LocateRegistry.createRegistry(port);
@@ -20,15 +19,9 @@ public class RMIServer {
                 System.out.println("RMI Registry already exists on port " + port);
             }
 
-            // Create the implementation object
-            // Export on port+100 (e.g. 1199 for Node1, 1200 for Node2) to avoid
-            // conflict with the registry port AND use a fixed, known port.
             int exportPort = port + 100;
             VideoImpl videoService = new VideoImpl(nodeName + "Storage", exportPort);
 
-            // Bind the remote object (stub) in the registry
-            // All nodes use the same binding name "VideoService" so the client can find it
-            // easily
             registry.rebind("VideoService", videoService);
 
             System.out.println("Server [" + nodeName + "] is ready and 'VideoService' is bound successfully.");
@@ -45,8 +38,6 @@ public class RMIServer {
         String nodeName = "Node1";
         int port = 1099;
 
-        // Take node name and port from command line arguments if provided
-        // Example: java RMIServer Node2 1100
         if (args.length >= 1) {
             nodeName = args[0];
         }
