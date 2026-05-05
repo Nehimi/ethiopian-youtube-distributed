@@ -1,5 +1,5 @@
 @echo off
-SET "JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-25.0.0.36-hotspot"
+SET "JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-21.0.11"
 SET "PATH=%JAVA_HOME%\bin;%PATH%"
 SET "MVN=C:\Users\hp\maven\apache-maven-3.9.5\bin\mvn.cmd"
 

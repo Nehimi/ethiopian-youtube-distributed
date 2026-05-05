@@ -22,14 +22,19 @@
         </div>
         <div class="header-center">
             <div class="search-container">
-                <input type="text" placeholder="Search">
-                <button class="search-btn"><i class="fas fa-search"></i></button>
+                <input type="text" id="searchInput" placeholder="Search">
+                <button id="searchBtn" class="search-btn"><i class="fas fa-search"></i></button>
             </div>
             <div class="mic-icon"><i class="fas fa-microphone"></i></div>
         </div>
         <div class="header-right">
-            <i class="fas fa-video"></i>
-            <i class="fas fa-bell"></i>
+            <button class="create-btn" id="uploadBtnIcon" title="Upload Video">
+                <i class="fas fa-plus"></i> Create
+            </button>
+            <div class="notification-icon">
+                <i class="far fa-bell"></i>
+                <span class="badge">9+</span>
+            </div>
             <div class="user-avatar">
                 <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="User">
             </div>
@@ -103,6 +108,175 @@
                 <!-- Related videos injected by JS -->
             </div>
         </aside>
+    </div>
+
+    <!-- YouTube Studio Style Upload Modal -->
+    <div id="uploadModal" class="modal studio-modal" style="display:none;">
+        <div class="studio-modal-content">
+            <div class="studio-modal-header">
+                <div class="header-title-container">
+                    <h2 id="modalTitle">Upload video</h2>
+                </div>
+                <div class="header-actions">
+                    <i class="fas fa-exclamation-circle" title="Send feedback"></i>
+                    <i class="fas fa-times close-upload-btn" title="Close"></i>
+                </div>
+            </div>
+
+            <div class="studio-stepper">
+                <div class="step active" data-step="1">
+                    <div class="step-circle">1</div>
+                    <span>Details</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step" data-step="2">
+                    <div class="step-circle">2</div>
+                    <span>Video elements</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step" data-step="3">
+                    <div class="step-circle">3</div>
+                    <span>Checks</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step" data-step="4">
+                    <div class="step-circle">4</div>
+                    <span>Visibility</span>
+                </div>
+            </div>
+
+            <div class="studio-modal-body">
+                <div class="body-content">
+                    <!-- Step 1: Details -->
+                    <div class="step-content active" id="step1">
+                        <div class="content-left">
+                            <h3 class="section-title">Details</h3>
+                            <div class="input-container">
+                                <label for="uploadTitle">Title (required)</label>
+                                <textarea id="uploadTitle" placeholder="Add a title that describes your video" required
+                                    maxlength="100"></textarea>
+                                <div class="char-count"><span id="titleCount">0</span>/100</div>
+                            </div>
+                            <div class="input-container">
+                                <label for="uploadDesc">Description</label>
+                                <textarea id="uploadDesc" placeholder="Tell viewers about your video" rows="8"
+                                    maxlength="5000"></textarea>
+                                <div class="char-count"><span id="descCount">0</span>/5000</div>
+                            </div>
+
+                            <div class="thumbnail-section" style="margin-top: 12px;">
+                                <h4 style="font-size: 15px; margin-bottom: 4px;">Thumbnail</h4>
+                                <p style="font-size: 12px; margin-bottom: 12px;">Select or upload a picture that shows
+                                    what's in your video. A good thumbnail stands
+                                    out and draws viewers' attention.</p>
+                                <div class="thumbnail-options">
+                                    <input type="file" id="thumbFile" accept="image/*" style="display: none;">
+                                    <div class="upload-thumb-card" id="thumbSelector"
+                                        onclick="document.getElementById('thumbFile').click()">
+                                        <i class="fas fa-image"></i>
+                                        <span>Upload thumbnail</span>
+                                        <img id="thumbPreview"
+                                            style="display:none; position:absolute; width:100%; height:100%; object-fit:cover; border-radius:4px;">
+                                    </div>
+                                    <div class="auto-thumb-card skeleton"></div>
+                                    <div class="auto-thumb-card skeleton"></div>
+                                    <div class="auto-thumb-card skeleton"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-right">
+                            <div class="preview-card">
+                                <div class="preview-video">
+                                    <div id="filePreviewPlaceholder">
+                                        <i class="fas fa-play-circle"></i>
+                                        <p>No video selected</p>
+                                    </div>
+                                    <video id="uploadPreview" style="display: none;" controls></video>
+                                </div>
+                                <div class="preview-info">
+                                    <div class="info-row">
+                                        <span class="label">Video link</span>
+                                        <a href="#" class="video-link">Processing...</a>
+                                    </div>
+                                    <div class="info-row">
+                                        <span class="label">File name</span>
+                                        <span id="fileNameDisplay" class="value">No file selected</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="file-selector-container">
+                                <input type="file" id="uploadFile" accept="video/mp4" style="display: none;">
+                                <button type="button" class="select-file-btn"
+                                    onclick="document.getElementById('uploadFile').click()">SELECT FILE</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2-4 Placeholders -->
+                    <div class="step-content" id="step2">
+                        <div class="placeholder-content">
+                            <i class="fas fa-magic"></i>
+                            <h3>Video Elements</h3>
+                            <p>Use cards and an end screen to show viewers related videos, websites, and calls to
+                                action.</p>
+                        </div>
+                    </div>
+                    <div class="step-content" id="step3">
+                        <div class="placeholder-content">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Checks</h3>
+                            <p>We'll check your video for issues that may restrict its visibility and then you can
+                                address them before publishing.</p>
+                        </div>
+                    </div>
+                    <div class="step-content" id="step4">
+                        <div class="placeholder-content">
+                            <i class="fas fa-eye"></i>
+                            <h3>Visibility</h3>
+                            <p>Choose when to publish and who can see your video.</p>
+                            <div class="visibility-options">
+                                <label class="radio-container">Save or publish
+                                    <input type="radio" name="visibility" checked>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <div class="sub-options">
+                                    <label class="radio-container">Private
+                                        <input type="radio" name="sub-visibility">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-container">Unlisted
+                                        <input type="radio" name="sub-visibility">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-container">Public
+                                        <input type="radio" name="sub-visibility" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="studio-modal-footer">
+                <div class="upload-progress-container">
+                    <div class="progress-info">
+                        <i class="fas fa-arrow-up"></i>
+                        <span id="progressText">Ready to upload</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="progressBarFill" class="progress-fill"></div>
+                    </div>
+                </div>
+                <div class="footer-buttons">
+                    <button id="prevBtn" class="text-btn" disabled>BACK</button>
+                    <button id="nextBtn" class="primary-btn">NEXT</button>
+                    <button id="finishBtn" class="primary-btn" style="display: none;">UPLOAD</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>

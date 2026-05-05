@@ -14,9 +14,11 @@ public interface VideoInterface extends Remote {
 
     /**
      * Uploads a part (chunk) of a video file.
-     * @param fileName The name of the file being uploaded.
-     * @param chunk The byte array of the current part.
-     * @param isFirstChunk If true, a new file is created. If false, data is appended.
+     * 
+     * @param fileName     The name of the file being uploaded.
+     * @param chunk        The byte array of the current part.
+     * @param isFirstChunk If true, a new file is created. If false, data is
+     *                     appended.
      */
     boolean uploadChunk(String fileName, byte[] chunk, boolean isFirstChunk) throws RemoteException;
 

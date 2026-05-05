@@ -32,7 +32,7 @@ public class VideoController {
                 return ResponseEntity.notFound().build();
 
             // 2. Connect to the RMI Node
-            String host = "10.198.73.40"; // Your server IP
+            String host = client.LoadBalancer.getHost(); // Your server IP
             int port = metadata.getNodePort();
 
             Registry registry = LocateRegistry.getRegistry(host, port);
@@ -58,5 +58,36 @@ public class VideoController {
     @GetMapping("/search")
     public List<VideoMetadata> searchVideos(@RequestParam String q) {
         return DatabaseManager.searchVideos(q);
+    }
+
+    @PostMapping("/upload")
+    public ResponseEntity<?> uploadVideo(
+            @RequestParam("file") org.springframework.web.multipart.MultipartFile file,
+            @RequestParam("title") String title,
+            @RequestParam("description") String description) {
+        try {
+            // 1. Create a temporary file
+            java.io.File tempFile = java.io.File.createTempFile("upload-", "-" + file.getOriginalFilename());
+            file.transferTo(tempFile);
+
+            // 2. Create Metadata (Matching Desktop logic)
+            // Constructor: title, description, fileName, filePath, nodeId, nodePort
+            VideoMetadata metadata = new VideoMetadata(title, description, file.getOriginalFilename(), "", "", 0);
+
+            // 3. Upload via RMI
+            boolean success = client.RMIClient.uploadVideo(metadata, tempFile);
+
+            // 4. Delete temp file
+            tempFile.delete();
+
+            if (success) {
+                return ResponseEntity.ok("Upload successful!");
+            } else {
+                return ResponseEntity.status(500).body("Upload failed at RMI level.");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(500).body("Error: " + e.getMessage());
+        }
     }
 }
